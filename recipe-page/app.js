@@ -17,6 +17,5 @@ const addProduct = (prodName,q) => {
     list.appendChild(newProd);
 };
 
-const centered = document.querySelector('.centered');
-centered.style.textAlign = 'center';
+
 
