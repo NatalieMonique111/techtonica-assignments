@@ -1,17 +1,44 @@
 
+let result;
+let img;
+const imgPath = 'src/coin.png';
+
 document.addEventListener("DOMContentLoaded", () => {
-  let button = document.getElementById("button");
-  let result = document.getElementById("result");
+  const button = document.getElementById("button");
+  result = document.getElementById("result");
   button.addEventListener("click", flipClick);
 });
 
-function flipClick(event) {
-  let num = Math.random();
+function flipClick() {
+  const qty = document.getElementById("quantity").value;
+  let coin;
 
-  if (num < 0.5) {
-    result.innerHTML = "You got HEAD";
-  } else {
-    result.innerHTML = "You got TAIL";
+  if (qty > 108) {
+    alert("We aint got that kind of money! Enter 108 or less");
+    return;
+  }
+  for (let i = 0; i < qty; i++) {
+    let num = Math.random();
+
+    if (num < 0.5) {
+      coin = getCoin('You got HEADS');
+
+    } else {
+      coin = getCoin('You got TAILS');
+    }
+    result.appendChild(coin);
   }
 }
 
+function getCoin(text) {
+  // create a new p element
+  const p = document.createElement('p');
+  const textNode = document.createTextNode(text);
+  p.appendChild(textNode);
+
+  // create a new img element
+  img = new Image(25, 25);
+  img.src = imgPath;
+  p.appendChild(img);
+  return p;
+}
