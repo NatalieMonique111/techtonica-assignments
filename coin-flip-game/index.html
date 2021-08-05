@@ -5,12 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="app.js"></script>
-  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <title> Document</title>
 </head>
 
 <body>
-  <button id="button" type="button">Flip the coin</button>
-  <div id="result"></div>
+  <main>
+    <h1>Coin Flip</h1>
+    <section class="gif">
+      <iframe src="https://giphy.com/embed/LukAHGCMfxMbK" width="250" height="250" frameBorder="0" class="giphy-embed"
+        allowFullScreen></iframe>
+
+    </section>
+
+    <section class="center">
+      <div><a href="https://giphy.com/gifs/casinos-sportsbooks-macroeconomics-LukAHGCMfxMbK">via GIPHY</a></div>
+    </section>
+    <div>
+      <label for="quantity">How many times to flip?</label>
+      <input type="number" id="quantity" min="1" value="1" />
+    </div>
+    <button id="button" type="button">Flip the coin</button>
+
+
+
+    </div>
+    <div id="result"></div>
+  </main>
+
 </body>
 
 </html>
