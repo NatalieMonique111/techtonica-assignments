@@ -14,7 +14,7 @@ function flipClick() {
   let coin;
 
   if (qty > 108) {
-    alert("We aint got that kind of money! Enter 108 or less");
+    alert("This isn't a bank! Enter 108 or less.");
     return;
   }
   for (let i = 0; i < qty; i++) {
