@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+}
+
+
+.gif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
