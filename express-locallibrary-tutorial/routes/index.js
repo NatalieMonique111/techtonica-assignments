@@ -6,9 +6,9 @@ const router = express.Router();
 //   res.render('index', { title: 'Novigrad Library' });
 // });
 
-// GET home page.
+// GET home page. Redirects only to booklist as that is main page for project.
 router.get('/', function (req, res) {
-  res.redirect('/catalog');
+  res.redirect('/catalog/books');
 });
 
 module.exports = router;
