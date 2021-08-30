@@ -5,7 +5,7 @@ function Child(props) {
 
   return (
     <div className="child">
-      <h2>Child</h2>
+      <h2>Impermanence</h2>
       <button onClick={() => props.changeWord(' changed state!')}>
         Click Me!</button>
 
