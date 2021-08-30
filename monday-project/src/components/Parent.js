@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Child from './Child';
-import ChildComponent from './ChildComponent';
+import OtherChild from './OtherChild';
 import './Parent.css';
 import Counter from './Counter';
 
@@ -15,9 +15,7 @@ function Parent() {
     <div className="parent">
       <h1>Parent</h1>
       <h2>Hello there, {nameState}!</h2>
-      <ChildComponent onChange={setNameState} />
-
-
+      <OtherChild onChange={setNameState} />
       <Child
         changeWord={word => setWord(word)} />
       <h2>{word}</h2>
