@@ -1,0 +1,13 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  text-align: center;
+}
+
+
+.ant-card {
+  margin: auto;
+  width: 400px;
+  
+}
+
