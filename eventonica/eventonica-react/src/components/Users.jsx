@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import DeleteUser from './DeleteUser'
 
 //a component has props and state, using this hook useState, it's a way
@@ -6,22 +6,55 @@ import DeleteUser from './DeleteUser'
 //with the object of the users.  
 
 const Users = () => {
+
   const getUsers = () => {
     fetch("/users")
+      //turn response into JSON
       .then(res => res.json())
       .then(res => setUsers(res))
   };
 
+  const addUser = (newUser) => {
+    fetch('/users', {
+      method: 'POST',
+      body: JSON.stringify(newUser),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then((res) => console.log('Creating user succeeded', res))
+      .then((user) => setUsers([...users, user]))
+  }
+  //.then(getUsers)
+
+
+  const deleteUserFetch = (userId) => {
+    fetch(`http://localhost:3000/users/users/id/${userId}`, {
+      method: 'DELETE'
+    })
+      .then((res) => console.log('Delete user succeeded', res))
+    // .then(() => setUsers([...users, userId]))
+  }
+
+
+
+
+
   useEffect(() => {
     getUsers(); // useEffect will run getUsers() every time this component loads, as opposed to just the first time it is rendered.
   }, []);
+
+
   const [name, setName] = React.useState('');
   const [id, setId] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [users, setUsers] = React.useState([]);
+
   const deleteUser = (deleteId) => {
     const newUsers = users.filter(i => i.id !== deleteId)
-    setUsers(newUsers)
+    deleteUserFetch(deleteId);
+    setUsers(newUsers);
+    console.log(newUsers);
   };
 
   // id, name, and email are states that store what values the user types in those fields
@@ -32,11 +65,15 @@ const Users = () => {
     e.preventDefault();
     const newUser = { id: id, name: name, email: email };
     setUsers([...users, newUser]);
+    addUser(newUser);
+
+
     //BONUS
     // reset();  // Reset all form data
     // return false; // Prevent page refresh
   };
 
+  //call getUsers after the onSubmit
   return (
     <section className="user-management">
       <h2>User Management</h2>
