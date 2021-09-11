@@ -38,8 +38,6 @@ const Users = () => {
 
 
 
-
-
   useEffect(() => {
     getUsers(); // useEffect will run getUsers() every time this component loads, as opposed to just the first time it is rendered.
   }, []);

@@ -8,9 +8,6 @@ let users = [
   { name: "Dory", email: "dory@gmail.com", id: "3" },
 ]
 
-
-
-
 // GET users listing.
 router.get('/', function (req, res, next) {
   res.send(users);
