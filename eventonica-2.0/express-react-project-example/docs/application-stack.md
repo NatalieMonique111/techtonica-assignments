@@ -70,13 +70,7 @@ In this project, we use quite a few APIs.
 - [Express][]
 - [pg-promise][]
 - [dotenv][]
-<!-- Todo: update after app is complete.
-We also create our own API, which is based on the [HTTP protocol][http] since
-it's a remote API (the client and the server aren't in the same physical
-location). Currently our API has two features:
 
-- Get a list of tasks
-- Add a new task -->
 
 Instead of calling an API function and getting a returned value, an HTTP API
 operates on a request / response cycle.
