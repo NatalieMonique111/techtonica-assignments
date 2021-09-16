@@ -159,11 +159,16 @@ ALTER TABLE ONLY public.tasks ALTER COLUMN id SET DEFAULT nextval('public.tasks_
 --
 
 COPY public.individuals (id, nickname, record_created, species_id) FROM stdin;
-1	lee	1999-01-08 04:05:06	1
 2	Cheesy bread	2012-01-01 02:01:02	3
 3	sparkles	2021-01-07 04:01:00	4
 4	gandalf	2017-03-01 11:01:02	5
 5	toby	2000-04-01 02:08:11	6
+7	baxter	2013-07-01 09:05:02	3
+8	solaris	2000-04-07 02:08:00	4
+9	lunaria	2015-12-01 18:10:02	5
+10	astaria	2004-02-04 07:11:11	6
+1	mephisto	1999-01-08 04:05:06	1
+11	bananas	2001-02-05 01:00:02	1
 \.
 
 
@@ -185,11 +190,11 @@ COPY public.sightings (date_time, individual_id, sighting_location, is_healthy, 
 --
 
 COPY public.species (species_id, common_name, scientific_name, number_in_wild, record_created, conservation_status, wikipedia_url, image_url) FROM stdin;
-1	cross river gorilla	gorilla gorilla diehl	300	2021-09-14 19:26:01.719638	CR	\N	\N
-3	amur Leopard	Panthera pardus orientalis	84	2021-09-14 19:42:56.889268	CR	\N	\N
 4	iridescent unicorn	luminosious unicornia	11	2021-09-14 19:51:03.970347	CR	https://en.wikipedia.org/wiki/Unicorn	https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Oftheunicorn.jpg/440px-Oftheunicorn.jpg
 5	pegasus	luminosious pegasi	11	2021-09-14 19:54:04.330039	CR	https://en.wikipedia.org/wiki/Pegasus	https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/The-Winged-Horse.jpg/440px-The-Winged-Horse.jpg
-6	alicorn	luminosious unisus	11	2021-09-14 20:27:51.236392	CR	https://en.wikipedia.org/wiki/Winged_unicorn	https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Detail_of_the_embroidered_dress_of_an_Apkallu%2C_showing_4-legged_winged_and_horned_animals._From_Nimrud%2C_Iraq._883-859_BCE._Ancient_Orient_Museum%2C_Istanbul.jpg/440px-Detail_of_the_embroidered_dress_of_an_Apkallu%2C_showing_4-legged_winged_and_horned_animals._From_Nimrud%2C_Iraq._883-859_BCE._Ancient_Orient_Museum%2C_Istanbul.jpg
+6	alicorn	luminosious unisus	11	2021-09-14 20:27:51.236392	CR	https://en.wikipedia.org/wiki/Winged_unicorn	https://static.wikia.nocookie.net/mythology/images/7/7b/Screen_Shot_2016-06-06_at_12.56.20_pm.png/revision/latest/scale-to-width-down/648?cb=20160606045755
+1	cross river gorilla	gorilla gorilla diehl	300	2021-09-14 19:26:01.719638	CR	https://en.wikipedia.org/wiki/Cross_River_gorilla	https://upload.wikimedia.org/wikipedia/commons/a/a9/Cross_river_gorilla.jpg
+3	amur Leopard	Panthera pardus orientalis	84	2021-09-14 19:42:56.889268	CR	https://en.wikipedia.org/wiki/Amur_leopard	https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Panthera_pardus_orientalis_Colchester_Zoo_%281%29.jpg/440px-Panthera_pardus_orientalis_Colchester_Zoo_%281%29.jpg
 \.
 
 
@@ -203,6 +208,7 @@ COPY public.tasks (id, name) FROM stdin;
 3	End white supremacy
 4	Advocate for living wage
 5	Provide universal health care
+6	new
 \.
 
 
@@ -210,7 +216,7 @@ COPY public.tasks (id, name) FROM stdin;
 -- Name: individuals_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.individuals_id_seq', 5, true);
+SELECT pg_catalog.setval('public.individuals_id_seq', 11, true);
 
 
 --
@@ -224,7 +230,7 @@ SELECT pg_catalog.setval('public.species_species_id_seq', 6, true);
 -- Name: tasks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.tasks_id_seq', 5, true);
+SELECT pg_catalog.setval('public.tasks_id_seq', 6, true);
 
 
 --
