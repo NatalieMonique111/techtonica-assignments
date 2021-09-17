@@ -3,11 +3,11 @@
   margin-bottom: 1rem;
   padding: 1rem;
   display: flex;
-  align-content: space-evenly;
 }
 
 label {
   margin-left: 1em;
+  
 }
 
 button {
