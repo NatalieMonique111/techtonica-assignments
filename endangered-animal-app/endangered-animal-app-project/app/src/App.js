@@ -5,12 +5,13 @@ import { Routes, Route, Link } from "react-router-dom";
 import AddSighting from "./AddSightings";
 import Sightings from "./Sightings";
 import * as apiClient from "./apiClient";
+import "./styles.css";
 
 const App = () => {
   return (
     <main>
       <nav>
-        <Link to="/">Endangered Animal Sightings</Link>
+        <h1 className= "heading" to="/"> 𓅺 Endangered Animal Sightings 𓆉</h1>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -39,6 +40,7 @@ const Home = () => {
     <>
       <h1>{process.env.REACT_APP_TITLE}</h1>
       <h2>{process.env.REACT_APP_SUBTITLE}</h2>
+
       <Sightings {...{sightings}} />
       <AddSighting {...{sightings, setSightings }}/>
     </>

@@ -1,9 +1,11 @@
 import React from "react";
+import "./styles.css"
 
 const Sightings = ({sightings}) => {
   return (
     <>
-    <section>
+    <section 
+    className="sectionColor">
       <ul>
         {sightings.map((s) => (
           <li key={s.sighting_id}>

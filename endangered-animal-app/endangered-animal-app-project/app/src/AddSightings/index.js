@@ -1,6 +1,7 @@
 import React from "react";
 
 import * as apiClient from "../apiClient";
+import "./styles.css";
 
 const AddSighting = ({sightings, setSightings}) => {
   // if sighting contains data, allow add.
@@ -28,7 +29,7 @@ const AddSighting = ({sightings, setSightings}) => {
     form.reset();
   }
   return (
-    <form {...{ onSubmit }}>
+    <form className = 'form'{...{ onSubmit }}>
       <label>
         date:
         <input name="dateTime" required />

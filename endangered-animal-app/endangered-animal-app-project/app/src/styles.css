@@ -1,0 +1,9 @@
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: powderblue;
+  font-size: 3em;
+  color: purple;
+  border: double;
+}
