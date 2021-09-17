@@ -1,10 +1,9 @@
-# Example Project With PostgreSQL, Express, and React
+# Endangered Animal App With PostgreSQL, Express, and React!
 
 End-to-end React app backed by an Express API server, persisting data to
-PostgreSQL database. The project has a very simple interface that fetches data
-from a database.
+PostgreSQL database. The project displays a list of sightings that is connected to a database. 
 
-## Prerequisites
+## Prerequisites to run on your local environment
 
 ### Docker
 
@@ -47,12 +46,7 @@ server.
 
 
 ### Initialize the Database
-
-Let's set up the database server, create the application database, and seed it
-with some data. You only need to do this the first time you set up your
-development environment.
-
-```sh
+``
 npm run db:init
 ```
 
