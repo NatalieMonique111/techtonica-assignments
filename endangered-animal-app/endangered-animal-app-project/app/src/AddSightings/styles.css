@@ -3,10 +3,13 @@
   margin-bottom: 1rem;
   padding: 1rem;
   display: flex;
-  align-items: start;
-  justify-content: center;
-
-  
-
+  align-content: space-evenly;
 }
 
+label {
+  margin-left: 1em;
+}
+
+button {
+  margin-left: 1rem;
+}

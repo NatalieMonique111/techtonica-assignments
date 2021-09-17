@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import AddSighting from "./AddSightings";
 import Sightings from "./Sightings";

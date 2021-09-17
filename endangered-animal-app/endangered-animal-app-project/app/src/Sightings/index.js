@@ -7,6 +7,7 @@ const Sightings = ({sightings}) => {
     <section 
     className="sectionColor">
       <ul>
+      <h3>Sightings Archive...</h3>
         {sightings.map((s) => (
           <li key={s.sighting_id}>
             Date: {s.date_time}, Sighter Contact: {s.sighter_email} Location: {s.sighting_location},

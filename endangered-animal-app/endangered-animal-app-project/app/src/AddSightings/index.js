@@ -31,6 +31,10 @@ const AddSighting = ({sightings, setSightings}) => {
   return (
     <form className = 'form'{...{ onSubmit }}>
       <label>
+        common name:
+        <input></input>
+      </label>
+      <label>
         date:
         <input name="dateTime" required />
       </label>
@@ -43,10 +47,10 @@ const AddSighting = ({sightings, setSightings}) => {
         <input name="isHealthy" required />
       </label>
       <label>
-        Sighter Email:
+        sighter email:
         <input name="sighterEmail" type="email" required />
       </label>
-      <button>Add Sightings</button>
+      <button>Report a Sighting</button>
     </form>
   )
 };
