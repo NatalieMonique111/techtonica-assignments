@@ -3,22 +3,6 @@
 // We use the browser built-in fetch function to perform the HTTP communication.
 // Notice that we always translate the reponse from JSON to JavaScript object using the Body.json() method.
 
-//////////TASKS////////////
-export const getTasks = async () => {
-  const response = await fetch("/api/tasks");
-  return response.json();
-};
-
-export const addTask = async (name) => {
-  const response = await fetch("/api/tasks", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ name }),
-  });
-  return response.json();
-};
 
 //////// SPECIES////////////
 export const getSpecies = async () => {
@@ -60,13 +44,13 @@ export const getSightings = async () => {
   return response.json();
 };
 
-export const addSightings = async (seen) => {
+export const addSighting = async (sighting) => {
   const response = await fetch("/api/sightings", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(seen),
+    body: JSON.stringify(sighting),
   });
   return response.json();
 };

@@ -13,24 +13,6 @@ import * as db from "./db.mjs";
 const app = express();
 const port = process.env.PORT || 4000;
 
-///////////TASKS////////////
-const tasks = express.Router();
-
-tasks.get("/", async (request, response) => {
-  const tasks = await db.getTasks();
-  //response.json() converts the JavaScript value to JSON and sends it as a response.
-  response.json(tasks);
-});
-
-//express.json() converts the incoming request payload (usually via POST or PUT) from a JSON string to a JavaScript value.
-tasks.use(express.json());
-tasks.post("/", async (request, response) => {
-  const { name } = request.body;
-  const task = await db.addTask(name);
-  response.status(201).json(task);
-});
-
-app.use("/api/tasks", tasks);
 
 ///////////SPECIES//////////
 const species = express.Router();
@@ -82,8 +64,7 @@ sightings.get("/", async (request, response) => {
 //express.json() converts the incoming request payload (usually via POST or PUT) from a JSON string to a JavaScript value.
 sightings.use(express.json());
 sightings.post("/", async (request, response) => {
-  const { seen } = request.body;
-  const sightings = await db.addSightings(seen);
+  const sightings = await db.addSightings(request.body);
   response.status(201).json(sightings);
 });
 

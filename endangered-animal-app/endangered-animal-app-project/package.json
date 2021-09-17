@@ -14,7 +14,6 @@
     "db:pg_dump": "docker-compose exec -u postgres db /usr/bin/env ash -c 'pg_dump -O -x -f /var/tmp/pg/seed.psql ${POSTGRES_DB}'",
     "db:start": "docker-compose up -d",
     "db:stop": "docker-compose down",
-    "eslint": "(cd app && npm run eslint); (cd server && npm run eslint)",
     "heroku:dashboard": "open https://dashboard.heroku.com/apps/$(heroku apps | sed -n '2 p')",
     "heroku:db:init": "run-s _heroku:db:reset _heroku:db:init",
     "heroku:deploy": "git push -f heroku HEAD:main",

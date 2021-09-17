@@ -2,16 +2,7 @@
 
 End-to-end React app backed by an Express API server, persisting data to
 PostgreSQL database. The project has a very simple interface that fetches data
-from a single table in the database, and allows you to add rows to that table.
-
-[See the app in action][live].
-
-[![Deploy to Heroku][deploy-badge]][deploy-workflow]
-[![Reset Heroku DB][reset-badge]][reset-workflow]
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+from a database.
 
 ## Prerequisites
 
@@ -54,8 +45,6 @@ server.
 
 2. You can choose to edit `.env` or just use as-is.
 
-[See the PostgreSQL Docker image documentation for more
-information][dh-postgres].
 
 ### Initialize the Database
 
@@ -96,40 +85,3 @@ npm run psql
 - [Read about the Express server](server/README.md).
 - [Read about the React app](app/README.md).
 
-## Deployment
-
-[Read about setting up and deploying to Heroku](docs/deployment.md).
-
-[deploy-badge]: https://github.com/gsong/express-react-project-example/actions/workflows/deploy.yaml/badge.svg
-[deploy-workflow]: https://github.com/gsong/express-react-project-example/actions/workflows/deploy.yaml
-[dh-postgres]: https://hub.docker.com/_/postgres
-[docker-www]: https://docs.docker.com/get-docker/
-[homebrew]: https://brew.sh
-[live]: https://tt-express-react-example.herokuapp.com
-[nvm]: https://github.com/nvm-sh/nvm
-[reset-badge]: https://github.com/gsong/express-react-project-example/actions/workflows/reset-db.yml/badge.svg
-[reset-workflow]: https://github.com/gsong/express-react-project-example/actions/workflows/reset-db.yml
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/aedward8"><img src="https://avatars.githubusercontent.com/u/63216164?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abigail Edwards</b></sub></a><br /><a href="#mentoring-aedward8" title="Mentoring">🧑‍🏫</a> <a href="#ideas-aedward8" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/gsong/express-react-project-example/issues?q=author%3Aaedward8" title="Bug reports">🐛</a> <a href="https://github.com/gsong/express-react-project-example/commits?author=aedward8" title="Tests">⚠️</a></td>
-    <td align="center"><a href="https://github.com/carbonsoda"><img src="https://avatars.githubusercontent.com/u/22334165?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Avery</b></sub></a><br /><a href="#infra-carbonsoda" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/gsong/express-react-project-example/commits?author=carbonsoda" title="Tests">⚠️</a></td>
-    <td align="center"><a href="https://github.com/sunnybrie"><img src="https://avatars.githubusercontent.com/u/76143251?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brie Klassen</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-example/commits?author=sunnybrie" title="Documentation">📖</a> <a href="#ideas-sunnybrie" title="Ideas, Planning, & Feedback">🤔</a> <a href="#mentoring-sunnybrie" title="Mentoring">🧑‍🏫</a> <a href="https://github.com/gsong/express-react-project-example/issues?q=author%3Asunnybrie" title="Bug reports">🐛</a> <a href="https://github.com/gsong/express-react-project-example/commits?author=sunnybrie" title="Tests">⚠️</a></td>
-    <td align="center"><a href="https://github.com/gsong"><img src="https://avatars.githubusercontent.com/u/607420?v=4?s=100" width="100px;" alt=""/><br /><sub><b>George Song</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-example/commits?author=gsong" title="Code">💻</a> <a href="https://github.com/gsong/express-react-project-example/commits?author=gsong" title="Documentation">📖</a> <a href="#infra-gsong" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-gsong" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/m3ia"><img src="https://avatars.githubusercontent.com/u/38749469?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Meia</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-example/commits?author=m3ia" title="Documentation">📖</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
