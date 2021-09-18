@@ -31,7 +31,7 @@ const AddSighting = ({sightings, setSightings}) => {
   return (
     <form className = 'form'{...{ onSubmit }}>
       <label>
-        species common name:
+        animal id:
         <input></input>
       </label>
       <label>
