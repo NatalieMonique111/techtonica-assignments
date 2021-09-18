@@ -11,7 +11,6 @@ const AddSighting = ({sightings, setSightings}) => {
     event.preventDefault();
     if(!canAdd) return;
   
-    // TODO below this line, make look like AddTask, but use form {} instead of string
     const form = event.currentTarget;
     const elements = form.elements;
 

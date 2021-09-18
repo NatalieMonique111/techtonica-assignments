@@ -23,7 +23,7 @@ const App = () => {
 const Home = () => {
   const [species, setSpecies] = React.useState([]);
   const [sightings, setSightings] = React.useState([]);
-  // TODO: Add hooks/load functions for sightings and individuals.
+  // TODO: Add hooks/load functions for individuals.
 
   const loadSpecies = async () => setSpecies(await apiClient.getSpecies());
   const loadSightings = async () => setSightings(await apiClient.getSightings());
