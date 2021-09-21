@@ -23,16 +23,58 @@ const Contacts = () => {
     </section>
   );
 };
-//
-const ContactList = ({ contacts }) => (
-  <ul>
-    {contacts.map(({ contact_id, name, email, phone_number, notes }) => (
-      <li key={contact_id}>
-        {name} {email} {phone_number} {notes}
+
+//a component for edit, when clicked, the read only text will populate as a form, but when user changes, the state of the hook 
+//set contact with new data, and connect to the back end. 
+
+// const ContactEdit = ({ contact }) => {
+//   const editContact = async (contact) => {
+//     await apiClient.editContact(contact);
+//   }
+//   const onEdit = (contact) => {
+//     console.log("contact", contact);
+//     editContact(contact);
+//   };
+//   const onChange = (event) => {
+//     setValue(event.target.value);
+//     // index of the contact, name of the contact property, setvalue
+//     setContacts(contacts);
+//   };
+//   return (
+//     <form>
+//       <button onClick={() => onEdit(c)}>Edit</button>
+//       <label>
+//         Name: <input name="name" value={value} onChange={onChange} required />
+//       </label>
+//       <label>
+//         Email: <input name="email" value={value} onChange={onChange} required />
+//       </label>
+//       <label>
+//         number: <input name="phoneNumber" value={value} onChange={onChange} required />
+//       </label>
+//       <label>
+//         notes: <input name="notes" value={value} onChange={onChange} required />
+//       </label>
+//       <button>Add Contact</button>
+//     </form>
+//   );
+// };
+
+const ContactList = ({ contacts }) => {
+
+  return (
+    <ul>
+      {contacts.map((c) => (
+       <li key={c.contact_id}>
+        {/* <button onClick={() => onEdit(c)}>Edit</button> */}
+        {/* toggle visibility of edit component */}
+        {c.name} {c.email} {c.phone_number} {c.notes}
+        {/* <ContactEdit {...{c}}></ContactEdit> */}
       </li>
     ))}
-  </ul>
-);
+   </ul>
+  );
+};
 
 const AddContact = ({ addContact }) => {
   const onSubmit = (e) => {

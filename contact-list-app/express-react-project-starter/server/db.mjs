@@ -16,6 +16,9 @@ export const getContacts = () => db.any("SELECT * FROM contacts");
 export const addContacts = (contact) =>
   db.one("INSERT INTO contacts(name, email, phone_number, notes) VALUES(${name}, ${email}, ${phoneNumber}, ${notes}) RETURNING *", contact);
 
+export const editContacts = () => db.any('');
+//"UPDATE "my-table" SET "val"=123,"msg"='hello' WHERE id = 1 "
+//////////////////
 
 
 
