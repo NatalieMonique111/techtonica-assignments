@@ -21,4 +21,10 @@ contactRouter.post("/edit", async (request, response) => {
   response.status(201).json(contacts);
 });
 
+//////////////
+contactRouter.get("/:contact_id", async (request, response) => 
+  response.json(await db.getContact(request.params.contact_id)),
+);
+
+
 export default contactRouter;

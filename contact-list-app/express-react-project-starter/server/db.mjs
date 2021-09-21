@@ -20,7 +20,10 @@ export const editContacts = () => db.any('');
 //"UPDATE "my-table" SET "val"=123,"msg"='hello' WHERE id = 1 "
 //////////////////
 
-
+export const getContact = (contact_id) => {
+  const sql =  `SELECT *  FROM contacts WHERE id=${contact_id}`;
+  return db.one(sql, { contact_id })
+};
 
 function initDb() {
   let connection;

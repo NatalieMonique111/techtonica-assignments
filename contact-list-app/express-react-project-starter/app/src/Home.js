@@ -2,8 +2,10 @@ import * as React from "react";
 
 import { Routes, Route, Link } from "react-router-dom";
 
+import ContactDetail from "./ContactDetail";
 import Contacts from "./Contacts";
 import Tasks from "./Tasks";
+
 
 const App = () => (
   <main>
@@ -23,6 +25,7 @@ const Home = () => (
     <h2>{process.env.REACT_APP_SUBTITLE}</h2>
     <Tasks />
     <Contacts />
+    <ContactDetail />
   </>
 );
 

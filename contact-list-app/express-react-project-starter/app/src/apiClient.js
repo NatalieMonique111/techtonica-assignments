@@ -46,3 +46,6 @@ const _post = async (url, body) => {
 
   return result;
 };
+//////////////
+export const getContact = (contact_id) =>
+  _get(`/api/contacts/${contact_id}`);
