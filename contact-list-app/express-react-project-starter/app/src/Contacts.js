@@ -84,12 +84,12 @@ const ContactList = ({ contacts }) => {
        <li key={c.contact_id}>
         {/* <button onClick={() => onEdit(c)}>Edit</button> */}
         {/* toggle visibility of edit component */}
-        <Link to={`/c/{c.name}`}> {c.name}</Link> {c.email} {c.phone_number} {c.notes} 
+        <Link to={`/contacts/${c.contact_id}`}> {c.name}</Link> {c.email} {c.phone_number} {c.notes} 
         {/* <ContactEdit {...{c}}></ContactEdit> */}
       </li>
     ))}
    </ul>
-   <ContactDetail {...{ selectedContact, contactDetails }} />
+   {/* <ContactDetail {...{ selectedContact, contactDetails }} /> */}
    </>
   );
 };

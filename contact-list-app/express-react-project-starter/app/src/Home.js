@@ -15,7 +15,10 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/contacts/:contact_id" element={<ContactDetail />}/>
+          
     </Routes>
+
   </main>
 );
 
@@ -25,7 +28,7 @@ const Home = () => (
     <h2>{process.env.REACT_APP_SUBTITLE}</h2>
     <Tasks />
     <Contacts />
-    <ContactDetail />
+    {/* <ContactDetail /> */}
   </>
 );
 
