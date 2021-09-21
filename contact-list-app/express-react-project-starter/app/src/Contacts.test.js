@@ -3,17 +3,17 @@ import App from './App';
 
 //in development! 
 
-describe('App', () => {
-  test('renders App component', () => {
-    render(<App />);
+describe('Contacts', () => {
+  test('renders Contacts component', () => {
+    render(<Contact />);
     const name = screen.getByText('Name');
     expect(name).toBeInTheDocument();
 
     screen.debug();
   });
 
-  test('renders App component', () => {
-    render(<App />);
+  test('renders Contacts component', () => {
+    render(<Contacts />);
     const email = screen.getByText('Email');
     expect(email).toBeInTheDocument();
 
