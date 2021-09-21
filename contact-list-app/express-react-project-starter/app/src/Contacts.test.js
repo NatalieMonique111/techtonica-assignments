@@ -5,7 +5,7 @@ import App from './App';
 
 describe('Contacts', () => {
   test('renders Contacts component', () => {
-    render(<Contact />);
+    render(<Contacts />);
     const name = screen.getByText('Name');
     expect(name).toBeInTheDocument();
 
