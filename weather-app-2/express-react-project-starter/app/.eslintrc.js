@@ -4,7 +4,7 @@ module.exports = {
   extends: [
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended",
+    
     "react-app",
   ],
   rules: {
