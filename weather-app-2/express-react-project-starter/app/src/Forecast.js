@@ -40,14 +40,14 @@ function Forecast() {
   // This updates change from the city. A hook for the callback. 
   const loadData = useCallback(async () => {
     const result =  await apiClient.getWeather(city);
-    console.log('new req', result);
+    console.log('backend', result);
 
 
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=9c61c7f89af09bd39e608da996495a41&units=imperial`)
       .then(res => res.json())
       .then(
         (result) => {
-          console.log(result)
+          console.log("react",result)
           // 
           if (result.cod === '404') {
             setError(result);
