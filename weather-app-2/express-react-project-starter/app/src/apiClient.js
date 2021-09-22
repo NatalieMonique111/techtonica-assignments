@@ -4,6 +4,10 @@ export const addTask = (name) => _post("/api/tasks", { name });
 
 const _get = async (url) => (await fetch(url)).json();
 
+////////////GET WEATHER///////////////
+export const getWeather = (city) => _get(`/api/weather/:${city}`)
+
+//////////////////////////////////////
 const _post = async (url, body) => {
   const response = await fetch(url, {
     method: "POST",
@@ -17,3 +21,5 @@ const _post = async (url, body) => {
 
   return result;
 };
+
+
