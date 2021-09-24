@@ -18,19 +18,4 @@ const App = () => (
   </main>
 );
 
-// const Home = () => (
-//   <>
-//     <h1>{process.env.REACT_APP_TITLE}</h1>
-//     <h2>{process.env.REACT_APP_SUBTITLE}</h2>
-    
-   
-//   </>
-// );
-
-// const Dashboard = () => (
-//   <>
-//     <h1>Dashboard</h1>
-//   </>
-// );
-
 export default App;

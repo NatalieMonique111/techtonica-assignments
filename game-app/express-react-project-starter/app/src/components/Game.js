@@ -3,11 +3,9 @@ import React, { useState, useEffect } from 'react'
 import { calculateWinner } from '../CalculateWinner';
 import * as apiClient from "../apiClient";
 
-
 import Board from './Board';
 
 import './styles.css'
-
 
 const Game = () => {
     const [board, setBoard] = useState(Array(9).fill(null));
@@ -23,7 +21,6 @@ const Game = () => {
       // setPlayers()
     }
 
- 
     const winner = calculateWinner(board, addScore); // X, O, or null
 
     const handleClick = (i) => {
@@ -38,7 +35,6 @@ const Game = () => {
         setBoard(boardCopy);
         setXIsNext(!xIsNext);
     }
-
 
     // initializes once on render automatically, no user interaction
     useEffect(() => {
@@ -73,12 +69,3 @@ const Start = ({setBoard}) => (
 )
 
 export default Game;
-
-//next steps: 
-//I have data from database, if I want to update the scores: 
-//  1) I need to create an API which updates scores (complete the same cycle with it). 
-//  2) identify when a player wins.
-//  3)call the update API when the player wins with player id
-//  4)call the API "this player won +1"
-//Bonus: maybe resetting the scores. 
-//there should be a specific line, when they update the score. Dont need to use another hook. 
