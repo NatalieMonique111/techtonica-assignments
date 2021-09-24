@@ -47,8 +47,8 @@ const Game = () => {
         <div >
           <h1 className="header">Tic Tac Toe</h1>
           <section className="score-board">
-        <p >{players[0].name}(x) : {players[0].score } </p>
-        <p >{players[1].name}(o) : {players[1].score } </p>
+        <p >{players[0].name} : {players[0].score } </p>
+        <p >{players[1].name} : {players[1].score } </p>
         </section>
         <Board squares={board} onClick={handleClick}/>
           <div>
