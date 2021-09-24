@@ -1,11 +1,14 @@
 import express from "express";
 import mime from "mime-types";
 
-import taskRouter from "./taskRouter.mjs";
-
 const app = express();
 
+import taskRouter from "./taskRouter.mjs";
+
+import playerRouter from "./playerRouter.mjs"
+
 app.use("/api/tasks", taskRouter);
+app.use("/api/players", playerRouter);
 
 // Do not comment out or delete this end point. The React development server
 // won't start until it pings this end point successfully.

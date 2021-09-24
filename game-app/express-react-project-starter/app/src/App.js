@@ -2,10 +2,12 @@ import * as React from "react";
 
 import { Routes, Route, Link } from "react-router-dom";
 
-import Tasks from "./Tasks";
+import Game from "./components/Game";
+
 
 const App = () => (
   <main>
+    
     <nav>
       <Link to="/">Home</Link> | <Link to="dashboard">Dashboard</Link>
     </nav>
@@ -13,6 +15,7 @@ const App = () => (
       <Route path="/" element={<Home />} />
       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
+   
   </main>
 );
 
@@ -20,7 +23,8 @@ const Home = () => (
   <>
     <h1>{process.env.REACT_APP_TITLE}</h1>
     <h2>{process.env.REACT_APP_SUBTITLE}</h2>
-    <Tasks />
+    <h1 className="header">Tic Tac Toe</h1>
+    <Game />
   </>
 );
 
