@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react'
 import { calculateWinner } from '../CalculateWinner';
 import * as apiClient from "../apiClient";
 
+
 import Board from './Board';
 
 import './styles.css'
-
 
 
 const Game = () => {
@@ -48,14 +48,15 @@ const Game = () => {
     },[]);
   
     return (
-        <div>
+        <div >
+          <h1 className="header">Tic Tac Toe</h1>
           <section className="score-board">
         <p >{players[0].name}(x) : {players[0].score } </p>
         <p >{players[1].name}(o) : {players[1].score } </p>
         </section>
         <Board squares={board} onClick={handleClick}/>
           <div>
-              <p className="winner">{winner ? 'Winner: '+ winner : 'Current Turn:' + (xIsNext ? 'X':'O')}</p>
+              <p className="winner">{winner ? 'Winner: '+ winner : 'Current Turn:  ' + (xIsNext ? 'X':'O')}</p>
               <Start {...{ setBoard }} />
           </div>
             
