@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  padding-top: 2em;
+  /* align-items: text-center */
+}
+
+.winner {
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  /* align-items: text-center */
+}
+
+.button {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+section {
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: white;
+  text-decoration-thickness: 1px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  color: white;
+}
+
